@@ -1,0 +1,39 @@
+actual: \
+compileActual 
+    ./dchat bob
+
+compileActual: \
+dchat.cpp
+    g++ -std=c++11 dchat.cpp -o dchat -lpthread -lboost_system
+
+encrypted: \
+compileE 
+    ./dchat bob
+
+compileE: \
+dchat.cpp
+    g++ -std=c++11 dchat_encryption.cpp -o dchat -lpthread -lboost_system
+
+fairQ: \
+compileQ 
+    ./dchat bob
+
+compileQ: \
+dchat.cpp
+    g++ -std=c++11 dchat_fairqueuing.cpp -o dchat -lpthread -lboost_system
+
+dec: \
+compileD 
+    ./dchat bob
+
+compileD: \
+dchat.cpp
+    g++ -std=c++11 dchat_decentralized.cpp -o dchat -lpthread -lboost_system
+
+traffic: \
+compileT 
+    ./dchat bob
+
+compileT: \
+dchat.cpp
+    g++ -std=c++11 dchat_trafficcontrol.cpp -o dchat -lpthread -lboost_system

@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+   char * data = NULL;
+
+   if (data != NULL && data[0] != '\0') {
+	
+   }
+
+   return 0;
+}
